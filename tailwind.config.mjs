@@ -10,7 +10,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        background:"#fafafa",
+        foreground:"#ffffff",
+        fontItems:"#333333",
+        primary:"#7843E9"
+      },
     },
   },
   darkMode: "class",
