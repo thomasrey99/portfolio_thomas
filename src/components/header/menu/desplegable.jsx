@@ -1,7 +1,7 @@
 const Desplegable = ({ sections, isOpen }) => {
     return (
       isOpen ? (
-        <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg mt-2">
+        <ul className="md:hidden z-10 absolute top-full left-0 w-full bg-white shadow-lg mt-2">
           {sections.map((section, index) => {
             return (
               <li key={index} className="text-base text-fontItems hover:text-primary font-semibold">
