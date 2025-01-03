@@ -20,7 +20,7 @@ const skills = [
 ];
 const About = () => {
   return (
-    <section className="bg-background p-[6rem]" id="About">
+    <section className="bg-background p-[4rem]" id="About">
       <div className="max-w-[120rem] m-auto w-[92%]">
         <Title />
         <div className="grid grid-cols-1 gap-[10rem] lg:grid-cols-2">
