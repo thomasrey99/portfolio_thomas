@@ -4,6 +4,7 @@ import Weather from "@/components/weather";
 const Home = () => {
   return (
     <section className="relative h-screen w-full home-background" id="#Home">
+      <Weather />
       <div className="absolute top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-6xl uppercase tracking-[3px] text-center text-[#111] font-extrabold">
           Hi!, i'm Thomas Rey

@@ -1,6 +1,5 @@
 "use client";
 import { getWeatherByCoordinates } from "@/libs/weather";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Weather = () => {
@@ -41,10 +40,10 @@ const Weather = () => {
   console.log(weather);
   return (
     weather && (
-      <div className="absolute top-0 right-20 flex items-center justify-center gap-3">
+      <div className="p-[0.5rem] absolute top-0 right-0 flex items-center justify-center  gap-2">
         <p className="text-fontItems text-[1rem] text-center font-bold">{weather.location.name}</p>
         <p className="text-fontItems text-[1rem] text-center">{weather.current.temp_c}°C</p>
-        <img src={weather.current.condition.icon} />
+        <img src={weather.current.condition.icon} className="w-[3rem] h-[3rem]"/>
       </div>
     )
   );
