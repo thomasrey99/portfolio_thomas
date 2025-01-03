@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import { NextUiProvider } from "@/context/NextUiProvider";
 import { Source_Sans_3 } from "next/font/google";
+import Footer from "@/components/footer/Footer";
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weights: ["400", "600", "900"],
@@ -15,8 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sourceSans.className}`}>
-        <Header />
-        <NextUiProvider>{children}</NextUiProvider>
+        <NextUiProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextUiProvider>
       </body>
     </html>
   );

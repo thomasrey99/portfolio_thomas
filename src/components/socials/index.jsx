@@ -31,7 +31,10 @@ const Socials = () => {
     <div className="absolute top-1/2 transform -translate-y-1/2 bg-white shadow-[rgba(100,_100,_111,_0.2)_0px_7px_29px_0px] p-[0.5rem] hidden md:block">
       {socials.map(({ social, url, icon }, index) => {
         return (
-          <div key={index} className="w-[4rem] h-[4rem]">
+          <div
+            key={index}
+            className="w-[4rem] h-[4rem] rounded-md hover:bg-[rgba(120,67,233,0.2)]"
+          >
             <a
               href={url}
               className="block p-[1rem] transition-background duration-300 rounded-md items-center justify-center"
