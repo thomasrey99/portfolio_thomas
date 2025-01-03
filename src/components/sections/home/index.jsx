@@ -1,4 +1,5 @@
 import Socials from "@/components/socials";
+import Weather from "@/components/weather";
 
 const Home = () => {
   return (
