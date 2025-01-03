@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Input } from "@nextui-org/react";
 import Title from "../title";
@@ -65,14 +65,17 @@ const About = () => {
   const filteredSkills = skills.filter((skill) =>
     skill.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const title = "About me";
+  const sub ="Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
   return (
     <section className="bg-background p-[4rem]" id="About">
       <div className="max-w-[120rem] m-auto w-[92%]">
-        <Title />
+        <Title title={title} sub={sub}/>
         <div className="grid grid-cols-1 gap-[10rem] lg:grid-cols-2">
           <div>
-            <h3 className="font-bold text-[1.8rem] mb-[3rem]">Get to Know me</h3>
+            <h3 className="font-bold text-[1.8rem] mb-[3rem]">
+              Get to Know me
+            </h3>
             <div className="mb-[4rem]">
               <p className="text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
                 I'm a <strong>web developer</strong> focused on solving problems
@@ -100,11 +103,10 @@ const About = () => {
               <h3 className="font-bold text-[1.8rem]">My skills</h3>
               <Input
                 classNames={{
-                  base: "max-w-full sm:max-w-[10rem] h-10",
+                  base: "max-w-full max-w-[8rem] sm:max-w-[15rem] h-10",
                   mainWrapper: "h-full",
                   input: "text-small",
-                  inputWrapper:
-                    "h-full font-normal text-default-500",
+                  inputWrapper: "h-full font-normal text-default-500",
                 }}
                 placeholder="Type to search..."
                 size="sm"

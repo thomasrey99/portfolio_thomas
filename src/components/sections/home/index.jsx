@@ -11,7 +11,7 @@ const Home = () => {
         </h1>
         <div className="mt-[3rem] mx-auto max-w-[60rem]">
           <p className="text-fontItems text-[1.5rem] text-center w-full leading-[1.6]">
-            a web developer focused on solving problems and creating websites
+            A web developer focused on solving problems and creating websites
             and web applications that lead to the success of your brand
           </p>
         </div>
