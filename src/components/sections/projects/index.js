@@ -33,12 +33,12 @@ const Projects = () => {
             return (
               <div
                 key={index}
-                className="grid grid-cols-[1.5fr_1fr] gap-[5rem] mb-[11rem]"
+                className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-[5rem] mb-[8rem] text-center md:text-left"
               >
                 <div className="overflow-hidden">
                   <img src={img} className="w-full h-auto object-cover" />
                 </div>
-                <div className="py-[2rem] flex flex-col justify-center items-start">
+                <div className="py-[2rem] flex flex-col justify-center items-center md:items-start">
                   <h3 className="text-[2rem] mb-[1.5rem] font-bold">{name}</h3>
                   <p className="text-[1rem] text-fontItems max-w-[60rem] leading-[1.7] mb-[2.5rem] break-words">
                     {description}
