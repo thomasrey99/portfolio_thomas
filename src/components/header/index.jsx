@@ -12,7 +12,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="w-full relative h-24 flex items-center justify-between bg-white px-10 py-5 z-10 shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
+    <header className="w-full fixed top-0 h-24 flex items-center justify-between bg-white px-10 py-5 z-10 shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
       <div className="flex items-center justify-center gap-4">
         <Avatar size="lg" src="/profile.jpeg" />
         <h2 className=" cursor-pointer text-xl font-black text-fontItems hover:text-primary">

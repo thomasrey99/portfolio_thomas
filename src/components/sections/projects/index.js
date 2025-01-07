@@ -25,7 +25,7 @@ const Projects = () => {
   const sub =
     "In this section you will be able to explore some of my personal and collaborative projects, each developed with various technologies, reflecting my versatility and ability to adapt to different technical challenges.";
   return (
-    <section className="p-[4rem]">
+    <section className="p-[4rem]" id="Projects">
       <div className="max-w-[120rem] m-auto w-[92%]">
         <Title title={title} sub={sub} />
         <div>

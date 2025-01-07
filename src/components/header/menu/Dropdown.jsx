@@ -7,7 +7,7 @@ const Dropdown = ({ sections, isOpen }) => {
             key={index}
             className="text-base text-fontItems hover:text-primary font-semibold"
           >
-            <a className="p-4 inline-block cursor-pointer">{section}</a>
+            <a href={`#${section}`} className="p-4 inline-block cursor-pointer">{section}</a>
           </li>
         );
       })}
