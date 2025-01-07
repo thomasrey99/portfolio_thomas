@@ -26,7 +26,7 @@ const Header = () => {
               key={index}
               className="text-base text-fontItems hover:text-primary font-semibold"
             >
-              <a href={`#${section}`} className="p-9 inline-block cursor-pointer">{section}</a>
+              <a href={`./#${section}`} className="p-9 inline-block cursor-pointer">{section}</a>
             </li>
           );
         })}

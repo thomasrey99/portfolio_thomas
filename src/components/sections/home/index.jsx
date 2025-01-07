@@ -19,13 +19,11 @@ const Home = () => {
         </div>
         <div className="mt-[4rem] text-center">
           <a className="bg-primary cursor-pointer text-white uppercase tracking-[1px] inline-block font-bold rounded-md shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] transition-transform duration-300 py-[0.8rem] px-[4rem] text-[1.2rem]">
-            Projects
+            View my Projects
           </a>
         </div>
       </div>
-      <div className="mouse-cont">
-        <div className="mouse"></div>
-      </div>
+
       <Socials />
     </section>
   );
