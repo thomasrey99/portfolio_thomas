@@ -8,12 +8,10 @@ const Weather = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Obtener la ubicación del usuario
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           const { latitude, longitude } = position.coords;
-          console.log(latitude, longitude);
           try {
             const weatherData = await getWeatherByCoordinates(
               latitude,
@@ -37,7 +35,6 @@ const Weather = () => {
     }
   }, []);
 
-  console.log(weather);
   return (
     weather && (
       <div className="p-[0.5rem] absolute top-0 right-0 flex items-center justify-center  gap-2">

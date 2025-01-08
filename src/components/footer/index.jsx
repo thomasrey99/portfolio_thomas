@@ -28,9 +28,9 @@ const Footer = () => {
   ];
   return (
     <footer className="bg-black text-[#fff]">
-      <div className="m-auto max-w-[120rem] w-[92%]">
-        <div className="flex justify-between py-[6rem]">
-          <div className="order-2">
+      <div className="m-auto max-w-[120rem] w-[92%] px-[1rem]">
+        <div className="flex flex-col sm:flex-row justify-between py-[3rem] sm:py-[5rem]">
+          <div className="order-1 sm:order-2">
             <h2 className="text-[1.4rem] uppercase tracking-[1px] font-bold">
               <span>Social</span>
             </h2>
@@ -48,12 +48,12 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <div className="order-1 w-[40%] max-w-[50rem]">
+          <div className="order-2 w-full mt-[3rem] sm:mt-0 sm:order-1 sm:w-[40%] sm:max-w-[50rem]">
             <h2 className="text-[1.4rem] uppercase tracking-[1px] font-bold">
               Thomas Rey
             </h2>
             <p className="mt-[1rem] text-[1rem]">
-              "a web developer focused on solving problems and creating websites
+              "A web developer focused on solving problems and creating websites
               and web applications that lead to the success of your brand"
             </p>
           </div>

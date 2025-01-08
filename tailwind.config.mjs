@@ -16,6 +16,9 @@ export default {
         fontItems:"#333333",
         primary:"#7843E9"
       },
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
     },
   },
   darkMode: "class",

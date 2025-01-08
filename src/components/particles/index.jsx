@@ -16,7 +16,7 @@ const CoverParticles = () => {
 
   return (
     init && (
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="hidden lg:block absolute inset-0 pointer-events-none">
         <Particles
           id="tsparticles"
           options={{

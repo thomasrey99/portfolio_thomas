@@ -68,22 +68,22 @@ const About = () => {
   const title = "About me";
   const sub ="Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
   return (
-    <section className="bg-background p-[4rem]" id="About">
-      <div className="max-w-[120rem] m-auto w-[92%]">
+    <section className="bg-background p-[0.8rem] sm:p-[4rem]" id="About">
+      <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
         <Title title={title} sub={sub}/>
-        <div className="grid grid-cols-1 gap-[10rem] lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-[4rem] sm:gap-[10rem] lg:grid-cols-2">
           <div>
-            <h3 className="font-bold text-[1.8rem] mb-[3rem]">
+            <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem] mb-[2rem] sm:mb-[4rem]">
               Get to Know me
             </h3>
-            <div className="mb-[4rem]">
-              <p className="text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
+            <div className="mb-[2rem] sm:mb-[4rem]">
+              <p className="text-[1rem] sm:text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
                 I'm a <strong>web developer</strong> focused on solving problems
                 and creating websites and web applications that lead to the
                 success of your brand. Check out some of my work in the{" "}
                 <strong>Projects</strong> section.
               </p>
-              <p className="text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
+              <p className="text-[1rem] sm:text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
                 As a developer, I'm always focused on improving my skills,
                 optimizing my code, and learning new technologies. I enjoy being
                 in constant professional evolution, participating in challenging
@@ -92,18 +92,18 @@ const About = () => {
               </p>
             </div>
             <a
-              href="./#contact"
-              className="cursor-pointer transform translate-y-[-3px] bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300"
+              href="./#Contact"
+              className="cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
             >
               Contact
             </a>
           </div>
           <div className="w-full">
             <div className="flex justify-between items-center">
-              <h3 className="font-bold text-[1.8rem]">My skills</h3>
+              <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem]">My skills</h3>
               <Input
                 classNames={{
-                  base: "max-w-full max-w-[8rem] sm:max-w-[15rem] h-10",
+                  base: "max-w-full max-w-[10rem] sm:max-w-[15rem] h-8 sm:h-10",
                   mainWrapper: "h-full",
                   input: "text-small",
                   inputWrapper: "h-full font-normal text-default-500",
@@ -120,7 +120,7 @@ const About = () => {
               {filteredSkills.map((item, index) => (
                 <div
                   key={index}
-                  className="py-[0.5rem] px-[1.5rem] mb-[1rem] mr-[1rem] text-[1rem] bg-[rgba(153,153,153,0.2)] rounded-[5px] font-semibold text-[#666]"
+                  className="py-[0.3rem] px-[1.3rem] mb-[1rem] mr-[1rem] sm:py-[0.5rem] sm:px-[1.5rem] sm:mb-[1rem] sm:mr-[1rem] text-[1rem] bg-[rgba(153,153,153,0.2)] rounded-[5px] font-semibold text-[#666]"
                 >
                   {item}
                 </div>

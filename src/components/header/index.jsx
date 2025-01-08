@@ -12,10 +12,15 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="w-full fixed top-0 h-24 flex items-center justify-between bg-white px-10 py-5 z-10 shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
+    <header className="w-full fixed top-0 h-24 flex items-center justify-between bg-white px-5 md:px-10 py-[1rem] md:py-5 z-10 shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
       <div className="flex items-center justify-center gap-4">
-        <Avatar size="lg" src="/profile.jpeg" />
-        <h2 className=" cursor-pointer text-xl font-black text-fontItems hover:text-primary">
+        <div className="hidden md:block">
+          <Avatar size="lg" src="/profile.jpeg" />
+        </div>
+        <div className="block md:hidden">
+          <Avatar size="md" src="/profile.jpeg" />
+        </div>
+        <h2 className=" cursor-pointer text-[1rem] lg:text-xl font-black text-fontItems hover:text-primary">
           THOMAS REY
         </h2>
       </div>
@@ -24,9 +29,9 @@ const Header = () => {
           return (
             <li
               key={index}
-              className="text-base text-fontItems hover:text-primary font-semibold"
+              className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
-              <a href={`./#${section}`} className="p-9 inline-block cursor-pointer">{section}</a>
+              <a href={`./#${section}`} className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]">{section}</a>
             </li>
           );
         })}
