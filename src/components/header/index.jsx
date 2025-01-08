@@ -22,7 +22,9 @@ const Header = () => {
           <Avatar size="md" src="/profile.jpeg" />
         </div>
         <h2 className=" cursor-pointer text-[1rem] lg:text-xl font-black text-fontItems hover:text-primary">
-          <Link href={"https://www.linkedin.com/in/thomas-rey-39099021b/"}>THOMAS REY</Link>
+          <Link href={"https://www.linkedin.com/in/thomas-rey-39099021b/"}>
+            THOMAS REY
+          </Link>
         </h2>
       </div>
       <ul className="hidden md:flex items-center gap-4">
@@ -33,7 +35,7 @@ const Header = () => {
               className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
               <Link
-                href={`/#${section}`}
+                href={`${section === "Home" ? "/" : `/#${section}`}`}
                 className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
               >
                 {section}

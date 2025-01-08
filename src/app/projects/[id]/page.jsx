@@ -82,13 +82,14 @@ export default function page() {
                 <a
                   href={project?.url}
                   target="blank"
-                  className="mr-[2rem] cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
+                  className="cursor-pointer bg-primary text-[#fff] py-[0.8rem] px-[4rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px] sm:mt-[1rem] sm:mr-[2rem]"
                 >
                   Live link
                 </a>
                 <Link
                   href={"/"}
-                  className="cursor-pointer bg-[#fff] border-2 border-[#7843E9] text-[#111] py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
+                  target="blank"
+                  className="cursor-pointer bg-[#fff] text-[#111] border-2 border-primary py-[0.8rem] px-[4rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px] mt-[1rem] sm:mr-[2rem]"
                 >
                   Go back
                 </Link>

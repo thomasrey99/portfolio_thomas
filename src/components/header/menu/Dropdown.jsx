@@ -10,7 +10,7 @@ const Dropdown = ({ sections, isOpen }) => {
             className="text-base text-fontItems text-right hover:text-primary font-semibold"
           >
             <Link
-              href={`/#${section}`}
+              href={`${section === "Home" ? "/" : `/#${section}`}`}
               className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer"
             >
               {section}
