@@ -1,27 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "@nextui-org/react";
 import Title from "../title";
-
-const skills = [
-  "HTML",
-  "CSS",
-  "Javascript",
-  "Typescript",
-  "React",
-  "Next.js",
-  "Vite",
-  "Angular",
-  "Redux Toolkit",
-  "Node",
-  "SASS",
-  "Tailwind CSS",
-  "Next/UI",
-  "Bootstrap",
-  "Postgres SQL",
-  "Sequelize",
-  "Express",
-];
 
 const SearchIcon = ({
   size = 24,
@@ -61,10 +41,16 @@ const SearchIcon = ({
 
 const About = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredSkills = skills.filter((skill) =>
+  const [skills, setSkills] = useState([]);
+  const filteredSkills =skills&&skills?.filter((skill) =>
     skill.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  )
+  useEffect(() => {
+    fetch("/skills.json")
+      .then((response) => response.json())
+      .then((data) => setSkills(data))
+      .catch((error) => console.error("Error loading skills:", error));
+  }, []);
   const title = "About me";
   const sub =
     "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";

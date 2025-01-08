@@ -1,26 +1,15 @@
+"use client"
+import { useEffect, useState } from "react";
 import Title from "../title";
 
 const Projects = () => {
-  const projects = [
-    {
-      name: "This portfolio",
-      img: "/portfolio.jpg",
-      description:
-        "This is my portfolio, which is built with Next js, tailwind css, next UI and vanilla css",
-    },
-    {
-      name: "Rick and Morty pedia",
-      img: "/rk.jpg",
-      description:
-        "Application that uses the Rick and Morty API to explore characters and episodes, with search, filtering and user authentication functions.",
-    },
-    {
-      name: "Las encinas boutique",
-      img: "/encinas.jpg",
-      description:
-        "Chocolate trading platform with user and administrator profiles in which I collaborate and lead in the backend and front end.",
-    },
-  ];
+  const [projects, setProjects] = useState();
+  useEffect(() => {
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error loading projects:", error));
+  }, []);
   const title = "Projects";
   const sub =
     "In this section you will be able to explore some of my personal and collaborative projects, each developed with various technologies, reflecting my versatility and ability to adapt to different technical challenges.";
@@ -29,7 +18,7 @@ const Projects = () => {
       <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
         <Title title={title} sub={sub} />
         <div>
-          {projects.map(({ name, img, description }, index) => {
+          {projects && projects.map(({ name, img, description }, index) => {
             return (
               <div
                 key={index}
