@@ -22,7 +22,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7843E9; /* Color del thumb */
+  background: #7843e9; /* Color del thumb */
   border-radius: 6px; /* Bordes redondeados */
   border: 2px solid #f3f4f6; /* Espacio entre el thumb y el track */
 }
@@ -30,7 +30,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #5c30b8; /* Color al pasar el mouse */
 }
-
 
 /* From Uiverse.io by vinodjangid07 */
 #checkbox {

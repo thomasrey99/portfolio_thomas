@@ -31,7 +31,12 @@ const Header = () => {
               key={index}
               className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
-              <a href={`./#${section}`} className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]">{section}</a>
+              <a
+                href={`./#${section}`}
+                className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
+              >
+                {section}
+              </a>
             </li>
           );
         })}

@@ -7,7 +7,12 @@ const Dropdown = ({ sections, isOpen }) => {
             key={index}
             className="text-base text-fontItems text-right hover:text-primary font-semibold"
           >
-            <a href={`#${section}`} className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer">{section}</a>
+            <a
+              href={`#${section}`}
+              className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer"
+            >
+              {section}
+            </a>
           </li>
         );
       })}

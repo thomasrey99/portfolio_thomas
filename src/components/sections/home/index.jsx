@@ -21,7 +21,10 @@ const Home = () => {
           </p>
         </div>
         <div className="mt-[2rem] sm:mt-[4rem] text-center">
-          <a href="./#Projects" className="cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]">
+          <a
+            href="./#Projects"
+            className="cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
+          >
             View my Projects
           </a>
         </div>

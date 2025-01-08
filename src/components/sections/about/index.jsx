@@ -66,11 +66,12 @@ const About = () => {
     skill.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const title = "About me";
-  const sub ="Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
+  const sub =
+    "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
   return (
     <section className="bg-background p-[0.8rem] sm:p-[4rem]" id="About">
       <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
-        <Title title={title} sub={sub}/>
+        <Title title={title} sub={sub} />
         <div className="grid grid-cols-1 gap-[4rem] sm:gap-[10rem] lg:grid-cols-2">
           <div>
             <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem] mb-[2rem] sm:mb-[4rem]">
@@ -100,7 +101,9 @@ const About = () => {
           </div>
           <div className="w-full">
             <div className="flex justify-between items-center">
-              <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem]">My skills</h3>
+              <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem]">
+                My skills
+              </h3>
               <Input
                 classNames={{
                   base: "max-w-full max-w-[10rem] sm:max-w-[15rem] h-8 sm:h-10",
