@@ -1,17 +1,44 @@
 [
   {
+    "id":"1",
     "name": "This portfolio",
     "img": "/portfolio.jpg",
-    "description": "This is my portfolio, which is built with Next js, tailwind css, next UI and vanilla css"
+    "description": "This is my portfolio, which is built with Next js, tailwind css, next UI and vanilla css",
+    "tools":[
+      "Next js",
+      "Tailwind css",
+      "Next ui",
+      "Javascript",
+      "CSS 3",
+      "HTML 5"
+    ],
+    "url":"https://portfolio-thomas-6em0allkh-thomas-reys-projects.vercel.app/"
   },
   {
+    "id":"2",
     "name": "Rick and Morty pedia",
     "img": "/rk.jpg",
-    "description": "Application that uses the Rick and Morty API to explore characters and episodes, with search, filtering and user authentication functions."
+    "description": "Application that uses the Rick and Morty API to explore characters and episodes, with search, filtering and user authentication functions.",
+    "tools":[
+      "Next js",
+      "Tailwind css",
+      "Typescript",
+      "CSS 3",
+      "HTML 5"
+    ],
+    "url":"https://rick-morty-pedia-f7rifb0xb-thomas-reys-projects.vercel.app/"
   },
   {
+    "id":"3",
     "name": "Las encinas boutique",
     "img": "/encinas.jpg",
-    "description": "Chocolate trading platform with user and administrator profiles in which I collaborate and lead in the backend and front end."
+    "description": "Chocolate trading platform with user and administrator profiles in which I collaborate and lead in the backend and front end.",
+    "tools":[
+      "React js",
+      "Javascript",
+      "CSS 3",
+      "HTML 5"
+    ],
+    "url":"https://las-encinas-boutique-omega.vercel.app/"
   }
 ]

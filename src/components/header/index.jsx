@@ -3,6 +3,7 @@ import { Avatar } from "@nextui-org/react";
 import Menu from "./menu";
 import { useState } from "react";
 import Dropdown from "./menu/Dropdown";
+import Link from "next/link";
 
 const sections = ["Home", "About", "Projects", "Contact"];
 
@@ -21,7 +22,7 @@ const Header = () => {
           <Avatar size="md" src="/profile.jpeg" />
         </div>
         <h2 className=" cursor-pointer text-[1rem] lg:text-xl font-black text-fontItems hover:text-primary">
-          THOMAS REY
+          <Link href={"https://www.linkedin.com/in/thomas-rey-39099021b/"}>THOMAS REY</Link>
         </h2>
       </div>
       <ul className="hidden md:flex items-center gap-4">
@@ -31,12 +32,12 @@ const Header = () => {
               key={index}
               className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
-              <a
-                href={`./#${section}`}
+              <Link
+                href={`/#${section}`}
                 className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
               >
                 {section}
-              </a>
+              </Link>
             </li>
           );
         })}

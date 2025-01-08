@@ -2,27 +2,28 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   const socials = [
     {
       social: "Linkedin",
-      url: "",
+      url: "https://www.linkedin.com/in/thomas-rey-39099021b/",
       icon: <FaLinkedin />,
     },
     {
       social: "Instagram",
-      url: "",
+      url: "https://www.instagram.com/thomas_leonel_rey/",
       icon: <FaSquareInstagram />,
     },
     {
       social: "Facebook",
-      url: "",
+      url: "https://www.facebook.com/thomas.rey.942?mibextid=ZbWKwL",
       icon: <FaFacebook />,
     },
     {
       social: "Git Hub",
-      url: "",
+      url: "https://github.com/thomasrey99",
       icon: <FaGithub />,
     },
   ];
@@ -37,13 +38,15 @@ const Footer = () => {
             <div className="mt-[1rem] flex">
               {socials.map(({ social, url, icon }, index) => {
                 return (
-                  <a
+                  <Link
                     href={url}
                     key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mr-[1rem] cursor-pointer"
                   >
                     <span className="text-[1.5rem]">{icon}</span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -62,7 +65,14 @@ const Footer = () => {
           <p className="text-[0.7rem] text-white">
             <span>
               © Copyright {new Date().getFullYear()}. Made by{" "}
-              <a href="https://www.linkedin.com/in/thomas-rey-39099021b/" target="blank" className="underline cursor-pointer font-bold ml-[2px]">Thomas Rey</a>
+              <a
+                href="https://www.linkedin.com/in/thomas-rey-39099021b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline cursor-pointer font-bold ml-[2px]"
+              >
+                Thomas Rey
+              </a>
             </span>
           </p>
         </div>
