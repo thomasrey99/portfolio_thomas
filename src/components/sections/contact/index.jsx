@@ -32,7 +32,7 @@ const Contact = () => {
     setIsLoading(true);
 
     if (isSubmitDisabled) {
-      setError("Por favor, completa todos los campos");
+      setError("Please complete all fields");
       setIsLoading(false);
       return;
     }
@@ -44,11 +44,11 @@ const Contact = () => {
         formData,
         { publicKey: process.env.NEXT_PUBLIC_USER_ID }
       );
-      setSuccess("Mensaje enviado con éxito");
+      setSuccess(`Message sent successfully, I will contact you soon ${formData.name}`);
       setFormData({ name: "", fromEmail: "", message: "" });
     } catch (err) {
       setError(
-        "Error al enviar el mensaje, si persiste, envie su mensaje a thomas_rey1999@outlook.com"
+        "Error sending message, if it persists, send your message to thomas_rey1999@outlook.com"
       );
     } finally {
       setIsLoading(false);
@@ -76,14 +76,14 @@ const Contact = () => {
       {success && (
         <MessageNotification
           type={"success"}
-          title={`Mensaje enviado con éxito, pronto me pondré en contacto contigo ${formData.name}`}
+          title={success}
           setStatus={setSuccess}
         />
       )}
       {error && (
         <MessageNotification
           type={"error"}
-          title={`Error al enviar el mensaje. Si persiste, envíame tu mensaje a Thomas_rey1999@outlook.com`}
+          title={error}
           setStatus={setError}
         />
       )}
