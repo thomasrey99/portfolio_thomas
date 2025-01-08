@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Dropdown = ({ sections, isOpen }) => {
   return isOpen ? (
     <ul className="md:hidden z-10 absolute top-full left-0 w-full bg-white shadow-[0px_5px_5px_0px_rgba(0,0,0,0.1)]">
@@ -7,12 +9,12 @@ const Dropdown = ({ sections, isOpen }) => {
             key={index}
             className="text-base text-fontItems text-right hover:text-primary font-semibold"
           >
-            <a
-              href={`#${section}`}
+            <Link
+              href={`/#${section}`}
               className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer"
             >
               {section}
-            </a>
+            </Link>
           </li>
         );
       })}
