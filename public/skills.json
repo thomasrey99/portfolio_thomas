@@ -15,5 +15,6 @@
   "Bootstrap",
   "Postgres SQL",
   "Sequelize",
-  "Express"
+  "Express",
+  "Wordpress"
 ]

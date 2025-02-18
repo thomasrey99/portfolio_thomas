@@ -38,10 +38,10 @@ const Weather = () => {
   return (
     weather && (
       <div className="p-[0.5rem] absolute top-0 right-0 flex items-center justify-center  gap-2">
-        <p className="text-fontItems text-[1rem] text-center font-bold">
+        <p className="text-primary text-[1rem] text-center font-bold">
           {weather.location.name}
         </p>
-        <p className="text-amber-500 text-[1rem] text-center font-bold">
+        <p className="text-primary text-[1rem] text-center font-bold">
           {weather.current.temp_c}°C
         </p>
         <img

@@ -8,6 +8,7 @@ const Home = () => {
       className="relative h-screen home-background lg:bg-none w-full overflow-hidden mt-[6rem]"
       id="Home"
     >
+      {/* Las partículas solo ocupan el fondo de este contenedor */}
       <CoverParticles />
       <Weather />
       <div className="absolute top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
@@ -33,5 +34,6 @@ const Home = () => {
     </section>
   );
 };
+
 
 export default Home;

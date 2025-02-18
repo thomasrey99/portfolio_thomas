@@ -23,14 +23,19 @@ export default function page() {
         id={`project-${id}`}
       >
         <CoverParticles />
-        <div className="absolute top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute z-10 top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-5xl sm:text-6xl uppercase tracking-[3px] text-center text-[#111] font-extrabold">
             {project?.name}
           </h1>
           <div className="mt-[2rem] sm:mt-[4rem] mx-auto max-w-[60rem]">
-            <p className="text-fontItems text-[1.2rem] sm:text-[1.5rem] text-center w-full leading-[1.6]">
-              {project?.description}
-            </p>
+            {project &&
+              project?.description?.map((paragraph, index) => {
+                return (
+                  <p key={index} className=" text-fontItems text-[1.2rem] sm:text-[1.5rem] text-center w-full leading-[1.6]">
+                    {paragraph}
+                  </p>
+                );
+              })}
           </div>
           <div className="mt-[2rem] sm:mt-[4rem] text-center">
             <a

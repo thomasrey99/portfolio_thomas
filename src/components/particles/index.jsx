@@ -16,12 +16,16 @@ const CoverParticles = () => {
 
   return (
     init && (
-      <div className="hidden lg:block absolute inset-0 pointer-events-none">
+      <div className="hidden lg:block absolute h-full inset-0 pointer-events-none z-0">
         <Particles
           id="tsparticles"
           options={{
             fullScreen: {
               enable: false,
+            },
+            style: {
+              width: "100%",
+              height: "100%",
             },
             background: {
               color: {
@@ -76,9 +80,6 @@ const CoverParticles = () => {
                   enable: true,
                 },
                 value: 200,
-              },
-              area:{
-                value:1000
               },
               opacity: {
                 value: 0.5,
