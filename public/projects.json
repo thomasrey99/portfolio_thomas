@@ -14,5 +14,18 @@
       "HTML 5"
     ],
     "url":"https://portfolio-thomas-6em0allkh-thomas-reys-projects.vercel.app/"
+  },
+  {
+    "id":"2",
+    "name": "Rick and Morty Pedia",
+    "img": "/rk.jpg",
+    "sub": "Web application developed with Next.js, JavaScript, and Tailwind CSS, which consumes the Rick and Morty public API to explore characters, search by name, apply dynamic filters, and view details.",
+    "description":[],
+    "tools":[
+      "Next js",
+      "Tailwind css",
+      "Javascript"
+    ],
+    "url":"https://rm-pedia.vercel.app/"
   }
 ]
