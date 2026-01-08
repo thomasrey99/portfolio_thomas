@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "role": "Web Developer",
+    "company": "Buenos Aires City Police",
+    "period": "Apr 2025 – Jun 2025",
+    "description": "Development of internal web applications to automate administrative processes and improve operational efficiency.",
+    "bullets": [
+      "Built automation tools with React and Node.js",
+      "Reduced process times from 30 min to 5 min",
+      "Collaborated with multidisciplinary teams"
+    ],
+    "skills": [
+      { "name": "React", "color": "green" },
+      { "name": "Node.js", "color": "green" },
+      { "name": "PostgreSQL", "color": "yellow" },
+      { "name": "REST APIs", "color": "yellow" }
+    ]
+  },
+  {
+    "id": 2,
+    "role": "Frontend Developer (Freelance)",
+    "company": "Seemple",
+    "period": "Jan 2024 – Dec 2024",
+    "description": "Design and development of modern, responsive web interfaces focused on usability and performance.",
+    "bullets": [
+      "Next.js and React UI development",
+      "Tailwind CSS styling",
+      "Performance optimization"
+    ],
+    "skills": [
+      { "name": "Next.js", "color": "green" },
+      { "name": "React", "color": "green" },
+      { "name": "Tailwind CSS", "color": "green" }
+    ]
+  },
+  {
+    "id": 3,
+    "role": "Image Analyst",
+    "company": "Buenos Aires City Police",
+    "period": "Apr 2019 – Present",
+    "description": "Visual data analysis for judicial investigations and public safety operations.",
+    "bullets": [
+      "Video evidence analysis",
+      "Technical reporting",
+      "Awarded Outstanding Staff 2024"
+    ],
+    "skills": [
+      { "name": "Data Analysis", "color": "blue" },
+      { "name": "Reporting", "color": "blue" },
+      { "name": "Critical Thinking", "color": "blue" }
+    ]
+  }
+]

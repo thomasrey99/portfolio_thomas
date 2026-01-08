@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { Input } from "@nextui-org/react";
 import Title from "../title";
+import SkillsCard from "./skillsCard";
+import LegendItem from "./LegendItem";
 
 const SearchIcon = ({
   size = 24,
@@ -42,8 +44,8 @@ const SearchIcon = ({
 const About = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [skills, setSkills] = useState([]);
-  const filteredSkills =skills&&skills?.filter((skill) =>
-    skill.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredSkills = skills && skills?.filter((skill) =>
+    skill.name.toLowerCase().includes(searchTerm.toLowerCase())
   )
   useEffect(() => {
     fetch("/skills.json")
@@ -107,16 +109,19 @@ const About = () => {
             </div>
             <div className="flex flex-wrap mt-[3rem]">
               {filteredSkills.map((item, index) => (
-                <div
-                  key={index}
-                  className="py-[0.3rem] px-[1.3rem] mb-[1rem] mr-[1rem] sm:py-[0.5rem] sm:px-[1.5rem] sm:mb-[1rem] sm:mr-[1rem] text-[1rem] bg-[rgba(153,153,153,0.2)] rounded-[5px] font-semibold text-[#666]"
-                >
-                  {item}
-                </div>
+                <SkillsCard skill={item} key={item.name} />
               ))}
               {filteredSkills.length === 0 && (
                 <p className="text-[1rem] text-[#666]">No skills found.</p>
               )}
+            </div>
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-[0.95rem] text-[#666]">
+              <LegendItem color="red" label="Programming Languages" />
+              <LegendItem color="green" label="Frameworks & Libraries" />
+              <LegendItem color="orange" label="UI / Styling" />
+              <LegendItem color="yellow" label="Tools & DevOps" />
+              <LegendItem color="purple" label="Databases" />
+              <LegendItem color="blue" label="Soft Skills" />
             </div>
           </div>
         </div>
