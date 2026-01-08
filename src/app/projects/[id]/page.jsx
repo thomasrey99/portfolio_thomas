@@ -23,7 +23,7 @@ export default function page() {
         id={`project-${id}`}
       >
         <CoverParticles />
-        <div className="absolute z-10 top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 left-1/2 max-w-[90rem] w-[92%] transform -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-5xl sm:text-6xl uppercase tracking-[3px] text-center text-[#111] font-extrabold">
             {project?.name}
           </h1>
