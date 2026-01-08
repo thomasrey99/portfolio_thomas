@@ -4,7 +4,7 @@ const ProjectCard = ({project}) => {
     return (
         <div
             id={`${project.id}`}
-            className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] sm:gap-[5rem] mb-[4rem] sm:mb-[8rem] text-center md:text-left"
+            className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] sm:gap-[5rem] mb-[4rem] sm:mb-[4rem] text-center md:text-left"
         >
             <div className="overflow-hidden">
                 <img src={project.img} className="w-full h-auto object-cover" />

@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "title": "Information Systems Engineering",
+    "institution": "Universidad Tecnológica Nacional (UTN)",
+    "period": "Mar 2025 – Present (Est. Dec 2030)",
+    "description": "Second year student in Information Systems Engineering.",
+    "bullets": [
+      "Algorithms and Data Structures",
+      "Computer Architecture",
+      "Mathematical Analysis",
+      "Technical English",
+      "Discrete Structures and Logic"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Full Stack Developer Bootcamp",
+    "institution": "Soy Henry",
+    "period": "Dec 2023",
+    "description": "Intensive full stack web development bootcamp (800+ hours).",
+    "bullets": [
+      "JavaScript, TypeScript, React, Next.js",
+      "Tailwind CSS, Node.js, Express",
+      "PostgreSQL",
+      "Awarded final group project"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Java Backend Developer",
+    "institution": "Digital House",
+    "period": "2023",
+    "description": "Backend development with Java and Spring Boot.",
+    "bullets": [
+      "REST API development",
+      "Spring Boot",
+      "Business logic and persistence"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Electromechanical Technician",
+    "institution": "Technical School No.2 'Gendarmería Nacional'",
+    "period": "Dec 2018",
+    "description": "Technical degree in electromechanics.",
+    "bullets": [
+      "Electrical circuits",
+      "Industrial machinery",
+      "Technical blueprint interpretation"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "English B2",
+    "institution": "Meeting Point Institute",
+    "period": "Mar 2024 – Present",
+    "description": "Upper-intermediate English level (B2).",
+    "bullets": [
+      "Advanced reading and writing",
+      "Intermediate speaking and listening"
+    ]
+  }
+]
