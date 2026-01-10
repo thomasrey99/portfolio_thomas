@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Title from "../title";
 import ProjectCard from "./ProjectCard";
+import ContentWrapper from "@/components/contentWrapper";
 
 const Projects = () => {
   const [projects, setProjects] = useState();
@@ -14,17 +15,17 @@ const Projects = () => {
   const title = "Projects";
   const sub = "In this section you will be able to explore some of my personal and collaborative projects, each developed with various technologies, reflecting my versatility and ability to adapt to different technical challenges.";
   return (
-    <section className="p-[0.8rem] sm:p-[4rem]" id="Projects">
-      <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
+    <section id="Projects">
+      <ContentWrapper>
         <Title title={title} sub={sub} />
         <div>
           {projects && projects.map((project, index) => {
             return (
-              <ProjectCard project={project} key={index}/>
+              <ProjectCard project={project} key={index} />
             );
           })}
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 };

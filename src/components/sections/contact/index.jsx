@@ -4,6 +4,7 @@ import Title from "../title";
 import { useEffect, useState, useMemo } from "react";
 import MessageNotification from "@/components/alerts/alert";
 import { validations } from "@/utils/validations";
+import ContentWrapper from "@/components/contentWrapper";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ const Contact = () => {
     "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible";
 
   return (
-    <section className="py-[6rem] home-background relative" id="Contact">
+    <section className="home-background" id="Contact">
       {success && (
         <MessageNotification
           type={"success"}
@@ -87,9 +88,18 @@ const Contact = () => {
           setStatus={setError}
         />
       )}
-      <div className="max-w-[120rem] m-auto w-[92%] mt-[2rem] sm:mt-[4rem] sm:w-[60%]">
+      <ContentWrapper>
         <Title title={title} sub={sub} />
-        <div className="shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] bg-white p-[2rem] sm:p-[4rem] mt-[6rem] max-w-[80rem] text-right w-[95%] rounded-[5px] mx-auto">
+        <div className="
+  shadow-[0_7px_29px_0_rgba(100,100,111,0.2)]
+  bg-white
+  p-[2rem] sm:p-[4rem]
+  w-full
+  lg:w-[60%]
+  max-w-[60rem]
+  rounded-[8px]
+  mx-auto
+">
           <form className="m-0 p-0" onSubmit={sendEmail}>
             <div className="mb-[2rem]">
               <label
@@ -154,17 +164,16 @@ const Contact = () => {
             </div>
             <button
               disabled={isSubmitDisabled}
-              className={`w-full sm:w-[30%] p-[1rem_2rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] transition-transform duration-300 ${
-                isSubmitDisabled
-                  ? "bg-[#f0f0f0] text-fontItems cursor-not-allowed"
-                  : "bg-primary text-white"
-              }`}
+              className={`w-full sm:w-[30%] p-[1rem_2rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] transition-transform duration-300 ${isSubmitDisabled
+                ? "bg-[#f0f0f0] text-fontItems cursor-not-allowed"
+                : "bg-primary text-white"
+                }`}
             >
               {isLoading ? "Sending..." : "Submit"}
             </button>
           </form>
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 };

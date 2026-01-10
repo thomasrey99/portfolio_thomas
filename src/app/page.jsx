@@ -7,13 +7,13 @@ import Education from "@/components/sections/education"
 
 export default function app() {
   return (
-    <main>
-      <Home/>
-      <About/>
-      <Experience/>
-      <Projects/>
-      <Education/>
-      <Contact/>
+    <main className="bg-background">
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Education />
+      <Contact />
     </main>
   )
 }

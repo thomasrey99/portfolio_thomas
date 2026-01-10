@@ -1,6 +1,6 @@
 const Title = ({ title, sub }) => {
   return (
-    <h2 className="mb-[5rem]">
+    <h2 className="mb-[4rem]">
       {" "}
       {/* margin-bottom: 5rem */}
       <span className="block text-[2.2rem] uppercase tracking-wider text-center mb-[3.5rem] relative font-bold text-[#111]">

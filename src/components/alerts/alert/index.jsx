@@ -15,7 +15,7 @@ const MessageNotification = ({ title, type, setStatus }) => {
         toast.style.marginTop = "6rem";
       },
       didClose: () => {
-        setStatus(""); // Limpia el estado después de cerrar el alert
+        setStatus("");
       },
     });
 

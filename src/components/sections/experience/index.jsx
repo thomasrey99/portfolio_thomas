@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Title from "../title";
 import ExperienceContent from "./ExperienceContent";
+import ContentWrapper from "@/components/contentWrapper";
 
 const Experience = () => {
 
@@ -18,18 +19,18 @@ const Experience = () => {
   const sub = "Developer with real production experience, not just projects.";
 
   return (
-    <section id="Experience" className="relative w-full mt-[6rem]">
-      <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
+    <section id="Experience">
+      <ContentWrapper>
 
         <Title title={title} sub={sub} />
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center">
           {
             experiences
             &&
             <ExperienceContent experiences={experiences} />
           }
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 };

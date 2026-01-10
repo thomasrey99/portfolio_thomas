@@ -4,6 +4,7 @@ import { Input } from "@nextui-org/react";
 import Title from "../title";
 import SkillsCard from "./skillsCard";
 import LegendItem from "./LegendItem";
+import ContentWrapper from "@/components/contentWrapper";
 
 const SearchIcon = ({
   size = 24,
@@ -57,8 +58,8 @@ const About = () => {
   const sub =
     "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
   return (
-    <section className="bg-background p-[0.8rem] sm:p-[4rem]" id="About">
-      <div className="max-w-[120rem] mt-[6rem] m-auto w-[92%]">
+    <section id="About">
+      <ContentWrapper>
         <Title title={title} sub={sub} />
         <div className="grid grid-cols-1 gap-[4rem] sm:gap-[10rem] lg:grid-cols-2">
           <div>
@@ -125,7 +126,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 };
