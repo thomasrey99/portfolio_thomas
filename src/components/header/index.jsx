@@ -5,7 +5,7 @@ import { useState } from "react";
 import Dropdown from "./menu/Dropdown";
 import Link from "next/link";
 
-const sections = ["Home", "About","Experience", "Education", "Projects", "Contact"];
+const sections = ["About","Experience", "Education", "Projects", "Contact"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
