@@ -15,7 +15,7 @@ const Projects = () => {
   const title = "Projects";
   const sub = "In this section you will be able to explore some of my personal and collaborative projects, each developed with various technologies, reflecting my versatility and ability to adapt to different technical challenges.";
   return (
-    <section id="Projects">
+    <section id="projects">
       <ContentWrapper>
         <Title title={title} sub={sub} />
         <div>

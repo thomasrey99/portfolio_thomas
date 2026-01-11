@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "SOBRE MÍ",
+    "subtitle": "Aquí encontrarás más información sobre mí, lo que hago y mis habilidades actuales, principalmente en el ámbito de la programación y la tecnología."
+  },
+  "about": {
+    "title": "Conóceme",
+    "info1": "Soy un desarrollador web enfocado en resolver problemas y crear sitios web y aplicaciones que contribuyan al éxito de tu marca. Puedes ver algunos de mis trabajos en la sección de Proyectos.",
+    "info2": "Como desarrollador, siempre estoy enfocado en mejorar mis habilidades, optimizar mi código y aprender nuevas tecnologías. Disfruto estar en constante evolución profesional, participar en proyectos desafiantes que impulsen mi crecimiento y formar parte de equipos con una comunicación efectiva y colaborativa.",
+    "contactButton": "Contacto"
+  },
+  "skill": {
+    "title": "Habilidades",
+    "searchBarPlaceholder":"Escribe para buscar",
+    "notFound":"No existen coincidencias",
+    "skillTypes":{
+            "programmingLanguages": "Lengujes de programación",
+            "frameworksLibraries":"Frameworks & Librerias",
+            "uIStyling":"UI / Estilo",
+            "toolsDevOps":"Herramientas & DevOps",
+            "databases":"Bases de datos",
+            "softSkills":"Habilidades blandas"
+    }
+  }
+}

@@ -5,7 +5,8 @@ import Title from "../title";
 import SkillsCard from "./skillsCard";
 import LegendItem from "./LegendItem";
 import ContentWrapper from "@/components/contentWrapper";
-
+import { t } from "@/libs/i18n";
+import { useLanguage } from "@/context/LanguageContext";
 const SearchIcon = ({
   size = 24,
   strokeWidth = 1.5,
@@ -42,7 +43,8 @@ const SearchIcon = ({
   );
 };
 
-const About = () => {
+const About = ({language}) => {
+  const about = t(language, "about");
   const [searchTerm, setSearchTerm] = useState("");
   const [skills, setSkills] = useState([]);
   const filteredSkills = skills && skills?.filter((skill) =>
@@ -54,44 +56,36 @@ const About = () => {
       .then((data) => setSkills(data))
       .catch((error) => console.error("Error loading skills:", error));
   }, []);
-  const title = "About me";
-  const sub =
-    "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology";
+  const title = about.header.title;
+  const sub = about.header.subtitle;
   return (
-    <section id="About">
+    <section id="about">
       <ContentWrapper>
         <Title title={title} sub={sub} />
         <div className="grid grid-cols-1 gap-[4rem] sm:gap-[10rem] lg:grid-cols-2">
           <div>
             <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem] mb-[2rem] sm:mb-[4rem]">
-              Get to Know me
+              {about.about.title}
             </h3>
             <div className="mb-[2rem] sm:mb-[4rem]">
               <p className="text-[1rem] sm:text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
-                I'm a <strong>web developer</strong> focused on solving problems
-                and creating websites and web applications that lead to the
-                success of your brand. Check out some of my work in the{" "}
-                <strong>Projects</strong> section.
+                {about.about.info1}
               </p>
               <p className="text-[1rem] sm:text-[1.2rem] text-[#666] leading-[1.7] max-w-[60rem] mb-[1rem]">
-                As a developer, I'm always focused on improving my skills,
-                optimizing my code, and learning new technologies. I enjoy being
-                in constant professional evolution, participating in challenging
-                projects that drive my growth and being part of teams with
-                effective and collaborative communication.
+                {about.about.info2}
               </p>
             </div>
             <a
               href="./#Contact"
               className="cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
             >
-              Contact
+              {about.about.contactButton}
             </a>
           </div>
           <div className="w-full">
             <div className="flex justify-between items-center">
               <h3 className="font-bold text-[1.5rem] sm:text-[1.8rem]">
-                My skills
+                {about.skill.title}
               </h3>
               <Input
                 classNames={{
@@ -100,7 +94,7 @@ const About = () => {
                   input: "text-small",
                   inputWrapper: "h-full font-normal text-default-500",
                 }}
-                placeholder="Type to search..."
+                placeholder={about.skill.searchBarPlaceholder}
                 size="sm"
                 startContent={<SearchIcon size={18} />}
                 type="search"
@@ -113,16 +107,16 @@ const About = () => {
                 <SkillsCard skill={item} key={item.name} />
               ))}
               {filteredSkills.length === 0 && (
-                <p className="text-[1rem] text-[#666]">No skills found.</p>
+                <p className="text-[1rem] text-[#666]">{about.skill.notFound}</p>
               )}
             </div>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-[0.95rem] text-[#666]">
-              <LegendItem color="red" label="Programming Languages" />
-              <LegendItem color="green" label="Frameworks & Libraries" />
-              <LegendItem color="orange" label="UI / Styling" />
-              <LegendItem color="yellow" label="Tools & DevOps" />
-              <LegendItem color="purple" label="Databases" />
-              <LegendItem color="blue" label="Soft Skills" />
+              <LegendItem color="red" label={about.skill.skillTypes.programmingLanguages} />
+              <LegendItem color="green" label={about.skill.skillTypes.frameworksLibraries}/>
+              <LegendItem color="orange" label={about.skill.skillTypes.uIStyling} />
+              <LegendItem color="yellow" label={about.skill.skillTypes.toolsDevOps} />
+              <LegendItem color="purple" label={about.skill.skillTypes.databases} />
+              <LegendItem color="blue" label={about.skill.skillTypes.softSkills} />
             </div>
           </div>
         </div>

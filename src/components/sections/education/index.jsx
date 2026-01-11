@@ -15,7 +15,7 @@ const Education = () => {
   }, []);
 
   return (
-    <section id="Education">
+    <section id="education">
       <ContentWrapper>
         <Title
           title="Education"

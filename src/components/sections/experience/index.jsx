@@ -19,7 +19,7 @@ const Experience = () => {
   const sub = "Developer with real production experience, not just projects.";
 
   return (
-    <section id="Experience">
+    <section id="experience">
       <ContentWrapper>
 
         <Title title={title} sub={sub} />

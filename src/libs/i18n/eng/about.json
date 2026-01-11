@@ -1,0 +1,26 @@
+{
+    "header":{
+        "title":"ABOUT ME",
+        "subtitle":"Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology"
+    },
+    "about":{
+        "title":"Get to Know me",
+        "info1":"I'm a web developer focused on solving problems and creating websites and web applications that lead to the success of your brand. Check out some of my work in the Projects section.",
+        "info2":"As a developer, I'm always focused on improving my skills, optimizing my code, and learning new technologies. I enjoy being in constant professional evolution, participating in challenging projects that drive my growth and being part of teams with effective and collaborative communication.",
+        "contactButton":"Contact"
+    },
+    "skill":{
+        "title":"skills",
+        "searchBarPlaceholder":"Type to search",
+        "notFound":"Not found",
+        "skillTypes":{
+            "programmingLanguages": "Programming Languages",
+            "frameworksLibraries":"Frameworks & Libraries",
+            "uIStyling":"UI / Styling",
+            "toolsDevOps":"Tools & DevOps",
+            "databases":"Databases",
+            "softSkills":"Soft Skills"
+        }
+    }
+    
+}

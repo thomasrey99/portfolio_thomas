@@ -4,10 +4,12 @@ import Menu from "./menu";
 import { useState } from "react";
 import Dropdown from "./menu/Dropdown";
 import Link from "next/link";
+import { t } from "@/libs/i18n";
 
-const sections = ["About","Experience", "Education", "Projects", "Contact"];
+const sections = ["About", "Experience", "Education", "Projects", "Contact"];
 
-const Header = () => {
+const Header = ({ language }) => {
+  const traduction = t(language, "navbar")
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenChange = () => {
     setIsOpen(!isOpen);
@@ -28,24 +30,30 @@ const Header = () => {
         </h2>
       </div>
       <ul className="hidden md:flex items-center gap-4">
-        {sections.map((section, index) => {
+        {traduction.sections.map(({ id, label }, index) => {
+
           return (
             <li
               key={index}
               className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
-              <Link
-                href={`${section === "Home" ? "/" : `/#${section}`}`}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById(id);
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
               >
-                {section}
-              </Link>
+                {label}
+              </button>
+
             </li>
           );
         })}
       </ul>
       <Menu handleOpenChange={handleOpenChange} />
-      <Dropdown isOpen={isOpen} sections={sections} />
+      <Dropdown isOpen={isOpen} sections={traduction.sections} />
     </header>
   );
 };

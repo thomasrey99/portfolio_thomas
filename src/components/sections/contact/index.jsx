@@ -73,7 +73,7 @@ const Contact = () => {
     "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible";
 
   return (
-    <section className="home-background" id="Contact">
+    <section className="home-background" id="contact">
       {success && (
         <MessageNotification
           type={"success"}

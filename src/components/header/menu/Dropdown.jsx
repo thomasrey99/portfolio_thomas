@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use"
 
 const Dropdown = ({ sections, isOpen }) => {
   return (
@@ -7,17 +7,21 @@ const Dropdown = ({ sections, isOpen }) => {
         transition-all duration-300 ease-in-out 
         ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}
     >
-      {sections.map((section, index) => (
+      {sections.map(({ id, label }, index) => (
         <li
           key={index}
           className="text-base text-fontItems text-right hover:text-primary font-semibold"
         >
-          <Link
-            href={`${section === "Home" ? "/" : `/#${section}`}`}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById(id);
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
             className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer"
           >
-            {section}
-          </Link>
+            {String(label)}
+          </button>
         </li>
       ))}
     </ul>
