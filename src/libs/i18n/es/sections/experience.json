@@ -1,0 +1,90 @@
+{
+    "section": {
+        "title": "Mi experiencia",
+        "subtitle": "Desarrollador con experiencia real en producción, no solo proyectos."
+    },
+    "experiences": [
+        {
+            "id": 1,
+            "role": "Desarrollador Web",
+            "company": "Policía de la Ciudad de Buenos Aires",
+            "period": "Abr 2025 – Jun 2025",
+            "description": "Desarrollo de aplicaciones web internas para automatizar procesos administrativos y mejorar la eficiencia operativa.",
+            "bullets": [
+                "Construcción de herramientas de automatización con React y Node.js",
+                "Reducción de tiempos de proceso de 30 min a 5 min",
+                "Colaboración con equipos multidisciplinarios"
+            ],
+            "skills": [
+                {
+                    "name": "React",
+                    "color": "green"
+                },
+                {
+                    "name": "Node.js",
+                    "color": "green"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "color": "yellow"
+                },
+                {
+                    "name": "APIs REST",
+                    "color": "yellow"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "role": "Desarrollador Frontend (Freelance)",
+            "company": "Seemple",
+            "period": "Ene 2024 – Dic 2024",
+            "description": "Diseño y desarrollo de interfaces web modernas y responsivas, enfocadas en la usabilidad y el rendimiento.",
+            "bullets": [
+                "Desarrollo de interfaces con Next.js y React",
+                "Estilizado con Tailwind CSS",
+                "Optimización de rendimiento"
+            ],
+            "skills": [
+                {
+                    "name": "Next.js",
+                    "color": "green"
+                },
+                {
+                    "name": "React",
+                    "color": "green"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "color": "green"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "role": "Analista de Imágenes",
+            "company": "Policía de la Ciudad de Buenos Aires",
+            "period": "Abr 2019 – Presente",
+            "description": "Análisis de datos visuales para investigaciones judiciales y operaciones de seguridad pública.",
+            "bullets": [
+                "Análisis de evidencia en video",
+                "Elaboración de informes técnicos",
+                "Reconocimiento como Personal Destacado 2024"
+            ],
+            "skills": [
+                {
+                    "name": "Análisis de Datos",
+                    "color": "blue"
+                },
+                {
+                    "name": "Reportes",
+                    "color": "blue"
+                },
+                {
+                    "name": "Pensamiento Crítico",
+                    "color": "blue"
+                }
+            ]
+        }
+    ]
+}

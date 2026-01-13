@@ -1,0 +1,26 @@
+{
+    "section":{
+        "title":"Contact me",
+        "subtitle":"Feel free to Contact me by submitting the form below and I will get back to you as soon as possible."
+    },
+    "form":{
+        "inputs":{
+            "name":{
+                "label":"Name",
+                "placeholder":"Enter your name"
+            },
+            "email":{
+                "label":"Email",
+                "placeholder":"Enter your email"
+            },
+            "message":{
+                "label":"Message",
+                "placeholder":"Enter your message"
+            }
+        },
+        "button":{
+            "sending":"Sending...",
+            "submit":"Submit"
+        }
+    }
+}

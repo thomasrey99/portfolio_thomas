@@ -1,18 +1,20 @@
-import esHome from "./es/home.json"
-import esAbout from "./es/about.json"
-import esExperience from "./es/experience.json"
-import esProjects from "./es/projects.json"
-import esEducation from "./es/education.json"
-import esContact from "./es/contact.json"
-import esNavbar from "./es/navbar.json"
+import esHome from "./es/sections//home.json"
+import esAbout from "./es/sections/about.json"
+import esExperience from "./es/sections/experience.json"
+import esProjects from "./es/sections/projects.json"
+import esEducation from "./es/sections/education.json"
+import esContact from "./es/sections/contact.json"
+import esNavbar from "./es/components/navbar.json"
+import esFooter from  "./es/components/footer.json"
 
-import enHome from "./eng/home"
-import enAbout from "./eng/about.json"
-import enExperience from "./eng/experience.json"
-import enProjects from "./eng/projects.json"
-import enEducation from "./eng/education.json"
-import enContact from "./eng/contact.json"
-import enNavabr from "./eng/navbar.json"
+import enHome from "./en/sections/home"
+import enAbout from "./en/sections/about.json"
+import enExperience from "./en/sections/experience.json"
+import enProjects from "./en/sections/projects.json"
+import enEducation from "./en/sections/education.json"
+import enContact from "./en/sections/contact.json"
+import enNavabr from "./en/components/navbar.json"
+import enFooter from  "./en/components/footer.json"
 
 const dictionaries = {
   es: {
@@ -22,7 +24,8 @@ const dictionaries = {
     projects: esProjects,
     education: esEducation,
     contact:esContact,
-    navbar:esNavbar
+    navbar:esNavbar,
+    footer:esFooter
   },
   en: {
     home: enHome,
@@ -31,7 +34,8 @@ const dictionaries = {
     projects: enProjects,
     education: enEducation,
     contact:enContact,
-    navbar:enNavabr
+    navbar:enNavabr,
+    footer:enFooter
   }
 };
 

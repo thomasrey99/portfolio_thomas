@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params }) {
           <LanguageProvider>
             <Header language={lang}/>
             {children}
-            <Footer />
+            <Footer language={lang}/>
           </LanguageProvider>
         </NextUiProvider>
       </body>

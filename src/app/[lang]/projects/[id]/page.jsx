@@ -1,25 +1,15 @@
 "use client";
 import CoverParticles from "@/components/particles";
 import SkillsCard from "@/components/sections/about/skillsCard";
+import { t } from "@/libs/i18n";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export default function Page() {
-  const { id } = useParams();
-  const [project, setProject] = useState(null);
+  const { id, lang } = useParams();
+  const traduction = t(lang, "projects");
+  const project = traduction.projects.filter((project) => project.id == 1)[0]
 
-  useEffect(() => {
-    fetch("/projects.json")
-      .then(res => res.json())
-      .then(data => {
-        const found = data.find(p => p.id === id);
-        setProject(found);
-      })
-      .catch(err => console.error("Error loading projects:", err));
-  }, [id]);
-
-  if (!project) return null;
 
   return (
     <>
@@ -42,7 +32,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-1"
             >
-              View live
+              {traduction.individual.buttons.liveButton}
             </a>
           </div>
         </div>
@@ -58,7 +48,9 @@ export default function Page() {
             {/* OVERVIEW */}
             <div className="max-w-[50rem] mx-auto mb-[7rem]">
               <h2 className="mb-[3rem] font-bold text-[1.5rem] sm:text-[1.8rem]">
-                Project overview
+                {
+                  traduction.individual.projectOverviewTitle
+                }
               </h2>
 
               <div className="text-[1rem] sm:text-[1.2rem] text-[#666] leading-[1.7] space-y-4">
@@ -71,7 +63,9 @@ export default function Page() {
             {/* TOOLS */}
             <div className="max-w-[50rem] mx-auto mb-[7rem]">
               <h2 className="mb-[3rem] font-bold text-[1.5rem] sm:text-[1.8rem]">
-                Tools used
+                {
+                  traduction.individual.toolsTitle
+                }
               </h2>
 
               <div className="flex flex-wrap">
@@ -84,7 +78,9 @@ export default function Page() {
             {/* LINKS */}
             <div className="max-w-[50rem] mx-auto">
               <h2 className="mb-[3rem] font-bold text-[1.5rem] sm:text-[1.8rem]">
-                See live
+                {
+                  traduction.individual.linksTitle
+                }
               </h2>
 
               <div className="flex flex-wrap gap-4">
@@ -93,14 +89,16 @@ export default function Page() {
                   target="_blank"
                   className="bg-primary text-white py-[0.8rem] px-[4rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-1"
                 >
-                  Live link
+                  {
+                  traduction.individual.buttons.liveButton
+                }
                 </a>
 
                 <Link
-                  href="/"
+                  href={`/${lang}/`}
                   className="bg-white text-[#111] border-2 border-primary py-[0.8rem] px-[4rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-1"
                 >
-                  Go back
+                  {traduction.individual.buttons.backButton  }
                 </Link>
               </div>
             </div>

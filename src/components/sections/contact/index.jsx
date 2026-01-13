@@ -5,8 +5,10 @@ import { useEffect, useState, useMemo } from "react";
 import MessageNotification from "@/components/alerts/alert";
 import { validations } from "@/utils/validations";
 import ContentWrapper from "@/components/contentWrapper";
+import { t } from "@/libs/i18n";
 
-const Contact = () => {
+const Contact = ({language}) => {
+  const traduction=t(language, "contact")
   const [formData, setFormData] = useState({
     name: "",
     fromEmail: "",
@@ -68,9 +70,8 @@ const Contact = () => {
     setErrorValidation(validations(formData));
   }, [formData]);
 
-  const title = "Contact me";
-  const sub =
-    "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible";
+  const title = traduction.section.title;
+  const sub =traduction.section.subtitle;
 
   return (
     <section className="home-background" id="contact">
@@ -106,13 +107,13 @@ const Contact = () => {
                 htmlFor="name"
                 className="m-0 p-0 text-[#666] text-[0.8rem] sm:text-[1rem] tracking-[1px] font-bold mb-[1rem] block text-left"
               >
-                Name
+                {traduction.form.inputs.name.label}
               </label>
               <input
                 className="text-fontItems p-[1rem] w-full border border-[#ebebeb] text-[1rem] tracking-[0px] bg-[#f0f0f0] rounded-[5px] font-semibold"
                 required
                 type="text"
-                placeholder="Enter your name"
+                placeholder={traduction.form.inputs.name.placeholder}
                 name="name"
                 onChange={handleChange}
                 value={formData.name}
@@ -126,13 +127,13 @@ const Contact = () => {
                 htmlFor="fromEmail"
                 className="m-0 p-0 text-[#666] text-[0.8rem] sm:text-[1rem] tracking-[1px] font-bold mb-[1rem] block text-left"
               >
-                Email
+                {traduction.form.inputs.email.label}
               </label>
               <input
                 className="text-fontItems p-[1rem] w-full border border-[#ebebeb] text-[1rem] tracking-[0px] bg-[#f0f0f0] rounded-[5px] font-semibold"
                 required
                 type="email"
-                placeholder="Enter your email"
+                placeholder={traduction.form.inputs.email.placeholder}
                 name="fromEmail"
                 onChange={handleChange}
                 value={formData.fromEmail}
@@ -146,14 +147,14 @@ const Contact = () => {
                 htmlFor="message"
                 className="m-0 p-0 text-[#666] text-[0.8rem] sm:text-[1rem] tracking-[1px] font-bold mb-[1rem] block text-left"
               >
-                Message
+                {traduction.form.inputs.message.label}
               </label>
               <textarea
                 required
                 className="text-fontItems p-[1rem] w-full border border-[#ebebeb] text-[1rem] tracking-[0px] bg-[#f0f0f0] rounded-[5px] font-semibold"
                 cols={30}
                 rows={10}
-                placeholder="Enter your message"
+                placeholder={traduction.form.inputs.message.placeholder}
                 name="message"
                 onChange={handleChange}
                 value={formData.message}
@@ -169,7 +170,7 @@ const Contact = () => {
                 : "bg-primary text-white"
                 }`}
             >
-              {isLoading ? "Sending..." : "Submit"}
+              {isLoading ? `${traduction.form.button.sending}` : `${traduction.form.button.submit}`}
             </button>
           </form>
         </div>

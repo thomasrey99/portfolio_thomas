@@ -1,0 +1,26 @@
+{
+    "section": {
+        "title": "Contáctame",
+        "subtitle": "No dudes en contactarme completando el formulario a continuación y me pondré en contacto contigo lo antes posible."
+    },
+    "form": {
+        "inputs": {
+            "name": {
+                "label": "Nombre",
+                "placeholder": "Ingresa tu nombre"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Ingresa tu email"
+            },
+            "message": {
+                "label": "Mensaje",
+                "placeholder": "Ingresa tu mensaje"
+            }
+        },
+        "button": {
+            "sending": "Enviando...",
+            "submit": "Enviar"
+        }
+    }
+}

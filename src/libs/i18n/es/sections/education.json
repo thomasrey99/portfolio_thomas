@@ -1,0 +1,70 @@
+{
+    "section": {
+        "title": "Educación",
+        "subtitle": "Formación académica y capacitación profesional."
+    },
+    "educations": [
+        {
+            "id": 1,
+            "title": "Ingeniería en Sistemas de Información",
+            "institution": "Universidad Tecnológica Nacional (UTN)",
+            "period": "Mar 2025 – Actualidad (Est. Dic 2030)",
+            "description": "Estudiante de segundo año de Ingeniería en Sistemas de Información.",
+            "bullets": [
+                "Algoritmos y Estructuras de Datos",
+                "Arquitectura de Computadoras",
+                "Análisis Matemático",
+                "Inglés Técnico",
+                "Estructuras Discretas y Lógica"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Bootcamp Full Stack Developer",
+            "institution": "Soy Henry",
+            "period": "Dic 2023",
+            "description": "Bootcamp intensivo de desarrollo web full stack (más de 800 horas).",
+            "bullets": [
+                "JavaScript, TypeScript, React, Next.js",
+                "Tailwind CSS, Node.js, Express",
+                "PostgreSQL",
+                "Proyecto final grupal premiado"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Desarrollador Backend Java",
+            "institution": "Digital House",
+            "period": "2023",
+            "description": "Desarrollo backend con Java y Spring Boot.",
+            "bullets": [
+                "Desarrollo de APIs REST",
+                "Spring Boot",
+                "Lógica de negocio y persistencia"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Técnico Electromecánico",
+            "institution": "Escuela Técnica N.º 2 \"Gendarmería Nacional\"",
+            "period": "Dic 2018",
+            "description": "Título técnico en electromecánica.",
+            "bullets": [
+                "Circuitos eléctricos",
+                "Maquinaria industrial",
+                "Interpretación de planos técnicos"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Inglés B2",
+            "institution": "Meeting Point Institute",
+            "period": "Mar 2024 – Actualidad",
+            "description": "Nivel de inglés intermedio-alto (B2).",
+            "bullets": [
+                "Lectura y escritura avanzada",
+                "Expresión oral y comprensión auditiva intermedia"
+            ]
+        }
+    ]
+}
