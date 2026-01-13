@@ -7,7 +7,6 @@ import Education from "@/components/sections/education"
 
 export default async function app({params}) {
   const {lang}=await params
-  console.log("idioma", lang)
   return (
     <main className="bg-background">
       <Home language={lang} />

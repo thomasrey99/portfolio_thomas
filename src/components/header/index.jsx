@@ -22,8 +22,8 @@ export default function Header({ language }) {
 
           {/* Brand */}
           <div className="flex items-center gap-3 min-w-0">
-            <Avatar size="md" src="/profile.jpeg" className="md:hidden shrink-0" />
-            <Avatar size="lg" src="/profile.jpeg" className="hidden md:block shrink-0" />
+            <Avatar size="md" src="/perfil.png" className="md:hidden shrink-0" />
+            <Avatar size="lg" src="/perfil.png" className="hidden md:block shrink-0" />
 
             <Link
               href="https://www.linkedin.com/in/thomas-rey-39099021b/"

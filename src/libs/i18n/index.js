@@ -7,14 +7,16 @@ import esContact from "./es/sections/contact.json"
 import esNavbar from "./es/components/navbar.json"
 import esFooter from  "./es/components/footer.json"
 
-import enHome from "./en/sections/home"
+import enHome from "./en/sections/home.json"
 import enAbout from "./en/sections/about.json"
 import enExperience from "./en/sections/experience.json"
 import enProjects from "./en/sections/projects.json"
 import enEducation from "./en/sections/education.json"
 import enContact from "./en/sections/contact.json"
-import enNavabr from "./en/components/navbar.json"
+import enNavbar from "./en/components/navbar.json"
 import enFooter from  "./en/components/footer.json"
+
+const DEFAULT_LANG = "es"
 
 const dictionaries = {
   es: {
@@ -34,9 +36,12 @@ const dictionaries = {
     projects: enProjects,
     education: enEducation,
     contact:enContact,
-    navbar:enNavabr,
+    navbar:enNavbar,
     footer:enFooter
   }
 };
 
-export const t = (lang, section) => dictionaries[lang][section]
+export const t = (lang, section) => {
+  if (!dictionaries[lang]) lang = DEFAULT_LANG
+  return dictionaries[lang][section] || {}
+}
