@@ -1,6 +1,8 @@
 "use"
 
-const Dropdown = ({ sections, isOpen }) => {
+import Link from "next/link";
+
+const Dropdown = ({ sections, isOpen, language }) => {
   return (
     <ul
       className={`md:hidden z-10 absolute top-full left-0 w-full bg-white shadow-[0px_5px_5px_0px_rgba(0,0,0,0.1)] 
@@ -12,16 +14,12 @@ const Dropdown = ({ sections, isOpen }) => {
           key={index}
           className="text-base text-fontItems text-right hover:text-primary font-semibold"
         >
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              const el = document.getElementById(id);
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
+          <Link
+            href={`/${language}/#${id}`}
             className="py-[1.5rem] px-[1rem] border-t border-solid border-[#eee] block cursor-pointer"
           >
             {String(label)}
-          </button>
+          </Link>
         </li>
       ))}
     </ul>

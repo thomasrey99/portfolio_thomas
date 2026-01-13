@@ -6,8 +6,6 @@ import Dropdown from "./menu/Dropdown";
 import Link from "next/link";
 import { t } from "@/libs/i18n";
 
-const sections = ["About", "Experience", "Education", "Projects", "Contact"];
-
 const Header = ({ language }) => {
   const traduction = t(language, "navbar")
   const [isOpen, setIsOpen] = useState(false);
@@ -37,23 +35,19 @@ const Header = ({ language }) => {
               key={index}
               className="text-base text-fontItems transition-all duration-300 hover:text-primary"
             >
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  const el = document.getElementById(id);
-                  if (el) el.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Link
+                href={`/${language}/#${id}`}
                 className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
               >
                 {label}
-              </button>
+              </Link>
 
             </li>
           );
         })}
       </ul>
       <Menu handleOpenChange={handleOpenChange} />
-      <Dropdown isOpen={isOpen} sections={traduction.sections} />
+      <Dropdown isOpen={isOpen} sections={traduction.sections} language={language}/>
     </header>
   );
 };
