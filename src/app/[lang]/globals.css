@@ -36,10 +36,6 @@ section{
   background: #5c30b8; 
 }
 
-#checkbox {
-  display: none;
-}
-
 .toggle {
   position: relative;
   width: 25px;
@@ -60,39 +56,40 @@ section{
   border-radius: 3px;
 }
 
-#bar2 {
+.toggle .bars:nth-child(2) {
   transition-duration: 0.8s;
 }
 
-#bar1,
-#bar3 {
+.toggle .bars:nth-child(1),
+.toggle .bars:nth-child(3) {
   width: 70%;
 }
 
-#checkbox:checked + .toggle .bars {
+/* ===== ANIMACION ORIGINAL ===== */
+
+.toggle.open .bars {
   position: absolute;
   transition-duration: 0.5s;
 }
 
-#checkbox:checked + .toggle #bar2 {
+.toggle.open .bars:nth-child(2) {
   transform: scaleX(0);
   transition-duration: 0.5s;
 }
 
-#checkbox:checked + .toggle #bar1 {
+.toggle.open .bars:nth-child(1) {
   width: 100%;
   transform: rotate(45deg);
   transition-duration: 0.5s;
 }
 
-#checkbox:checked + .toggle #bar3 {
+.toggle.open .bars:nth-child(3) {
   width: 100%;
   transform: rotate(-45deg);
   transition-duration: 0.5s;
 }
 
-#checkbox:checked + .toggle {
-  transition-duration: 0.5s;
+.toggle.open {
   transform: rotate(180deg);
 }
 

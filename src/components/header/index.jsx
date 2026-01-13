@@ -5,51 +5,63 @@ import { useState } from "react";
 import Dropdown from "./menu/Dropdown";
 import Link from "next/link";
 import { t } from "@/libs/i18n";
+import Weather from "../weather";
 
-const Header = ({ language }) => {
-  const traduction = t(language, "navbar")
+export default function Header({ language }) {
+  const traduction = t(language, "navbar");
   const [isOpen, setIsOpen] = useState(false);
-  const handleOpenChange = () => {
-    setIsOpen(!isOpen);
-  };
+
+  const handleToggle = () => setIsOpen((v) => !v);
+  const handleClose = () => setIsOpen(false);
+
   return (
-    <header className="w-full z-10 fixed top-0 h-24 flex items-center justify-between bg-white px-5 md:px-10 py-[1rem] md:py-5 z-10 shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
-      <div className="flex items-center justify-center gap-4">
-        <div className="hidden md:block">
-          <Avatar size="lg" src="/profile.jpeg" />
-        </div>
-        <div className="block md:hidden">
-          <Avatar size="md" src="/profile.jpeg" />
-        </div>
-        <h2 className=" cursor-pointer text-[1rem] lg:text-xl font-black text-fontItems hover:text-primary">
-          <Link href={"https://www.linkedin.com/in/thomas-rey-39099021b/"}>
-            THOMAS REY
-          </Link>
-        </h2>
-      </div>
-      <ul className="hidden md:flex items-center gap-4">
-        {traduction.sections.map(({ id, label }, index) => {
+    <>
+      {/* NAVBAR */}
+      <header className="fixed top-0 w-full z-50 h-20 md:h-24 bg-white shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
+        <div className="h-full flex items-center justify-between px-4 sm:px-6 md:px-10">
 
-          return (
-            <li
-              key={index}
-              className="text-base text-fontItems transition-all duration-300 hover:text-primary"
+          {/* Brand */}
+          <div className="flex items-center gap-3 min-w-0">
+            <Avatar size="md" src="/profile.jpeg" className="md:hidden shrink-0" />
+            <Avatar size="lg" src="/profile.jpeg" className="hidden md:block shrink-0" />
+
+            <Link
+              href="https://www.linkedin.com/in/thomas-rey-39099021b/"
+              className="font-black tracking-wide text-sm sm:text-base md:text-xl hover:text-primary transition truncate"
             >
-              <Link
-                href={`/${language}/#${id}`}
-                className="p-[1.8rem] uppercase inline-block cursor-pointer font-bold text-[0.9rem] lg:text-[1rem]"
-              >
-                {label}
-              </Link>
+              THOMAS REY
+            </Link>
+          </div>
 
-            </li>
-          );
-        })}
-      </ul>
-      <Menu handleOpenChange={handleOpenChange} />
-      <Dropdown isOpen={isOpen} sections={traduction.sections} language={language}/>
-    </header>
+          {/* Desktop actions */}
+          <div className="hidden md:flex items-center gap-6">
+            <Weather />
+            <Menu isOpen={isOpen} onToggle={handleToggle} />
+          </div>
+
+          {/* Mobile actions */}
+          <div className="md:hidden flex items-center gap-6">
+            <Weather />
+            <Menu isOpen={isOpen} onToggle={handleToggle} />
+          </div>
+        </div>
+      </header>
+
+      {/* OVERLAY */}
+      {isOpen && (
+        <div
+          onClick={handleClose}
+          className="fixed inset-0 bg-black/10 backdrop-blur-sm z-30"
+        />
+      )}
+
+      {/* DRAWER */}
+      <Dropdown
+        handleClose={handleClose}
+        isOpen={isOpen}
+        nav={traduction.nav}
+        language={language}
+      />
+    </>
   );
-};
-
-export default Header;
+}

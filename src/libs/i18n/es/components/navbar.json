@@ -1,9 +1,27 @@
 {
-  "sections": [
-    { "id": "about", "label": "Sobre mi" },
-    { "id": "experience", "label": "Experiencia" },
-    { "id": "education", "label": "Educacion" },
-    { "id": "projects", "label": "Proyectos" },
-    { "id": "contact", "label": "Contacto" }
-  ]
+  "nav": {
+    "sections": [
+      {
+        "id": "about",
+        "label": "Sobre mi"
+      },
+      {
+        "id": "experience",
+        "label": "Experiencia"
+      },
+      {
+        "id": "education",
+        "label": "Educacion"
+      },
+      {
+        "id": "projects",
+        "label": "Proyectos"
+      },
+      {
+        "id": "contact",
+        "label": "Contacto"
+      }
+    ],
+    "placeholder": "CAMBIAR LENGUAJE"
+  }
 }
