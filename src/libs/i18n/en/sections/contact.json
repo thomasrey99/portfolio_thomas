@@ -7,20 +7,35 @@
         "inputs":{
             "name":{
                 "label":"Name",
-                "placeholder":"Enter your name"
+                "placeholder":"Enter your name",
+                "validations":{
+                    "empty":"Enter your name",
+                    "nameRule":"The name must only contain letters and be a maximum of 50 characters"
+                }
             },
             "email":{
                 "label":"Email",
-                "placeholder":"Enter your email"
+                "placeholder":"Enter your email",
+                "validations":{
+                    "empty":"Enter your email",
+                    "emailRule":"Enter a valid email"
+                }
             },
             "message":{
                 "label":"Message",
-                "placeholder":"Enter your message"
+                "placeholder":"Enter your message",
+                "validations":{
+                    "empty":"Enter your message"
+                }
             }
         },
         "button":{
             "sending":"Sending...",
             "submit":"Submit"
         }
+    },
+    "notifications":{
+        "error":"Error sending message, if it persists, send your message to thomas_rey1999@outlook.com.",
+        "success":"Message sent successfully, I will contact you soon."
     }
 }

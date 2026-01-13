@@ -7,20 +7,35 @@
         "inputs": {
             "name": {
                 "label": "Nombre",
-                "placeholder": "Ingresa tu nombre"
+                "placeholder": "Ingresa tu nombre",
+                "validations": {
+                    "empty": "Ingresa tu nombre",
+                    "nameRule": "El nombre solo debe contener letras y tener un máximo de 50 caracteres"
+                }
             },
             "email": {
-                "label": "Email",
-                "placeholder": "Ingresa tu email"
+                "label": "Correo",
+                "placeholder": "Ingresa tu correo",
+                "validations": {
+                    "empty": "Ingresa tu correo",
+                    "emailRule": "Ingresa un correo válido"
+                }
             },
             "message": {
                 "label": "Mensaje",
-                "placeholder": "Ingresa tu mensaje"
+                "placeholder": "Ingresa tu mensaje",
+                "validations": {
+                    "empty": "Ingresa tu mensaje"
+                }
             }
         },
         "button": {
             "sending": "Enviando...",
             "submit": "Enviar"
         }
+    },
+    "notifications": {
+        "error": "Error al enviar el mensaje, si persiste envía tu mensaje a thomas_rey1999@outlook.com.",
+        "success": "Mensaje enviado exitosamente, me pondré en contacto contigo pronto."
     }
 }

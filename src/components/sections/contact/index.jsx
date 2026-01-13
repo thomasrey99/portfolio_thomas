@@ -7,8 +7,8 @@ import { validations } from "@/utils/validations";
 import ContentWrapper from "@/components/contentWrapper";
 import { t } from "@/libs/i18n";
 
-const Contact = ({language}) => {
-  const traduction=t(language, "contact")
+const Contact = ({ language }) => {
+  const traduction = t(language, "contact")
   const [formData, setFormData] = useState({
     name: "",
     fromEmail: "",
@@ -47,11 +47,11 @@ const Contact = ({language}) => {
         formData,
         { publicKey: process.env.NEXT_PUBLIC_USER_ID }
       );
-      setSuccess(`Message sent successfully, I will contact you soon ${formData.name}`);
+      setSuccess(traduction.notifications.success);
       setFormData({ name: "", fromEmail: "", message: "" });
     } catch (err) {
       setError(
-        "Error sending message, if it persists, send your message to thomas_rey1999@outlook.com"
+        traduction.notifications.error
       );
     } finally {
       setIsLoading(false);
@@ -67,11 +67,11 @@ const Contact = ({language}) => {
   };
 
   useEffect(() => {
-    setErrorValidation(validations(formData));
+    setErrorValidation(validations(formData, language));
   }, [formData]);
 
   const title = traduction.section.title;
-  const sub =traduction.section.subtitle;
+  const sub = traduction.section.subtitle;
 
   return (
     <section className="home-background" id="contact">
@@ -92,15 +92,15 @@ const Contact = ({language}) => {
       <ContentWrapper>
         <Title title={title} sub={sub} />
         <div className="
-  shadow-[0_7px_29px_0_rgba(100,100,111,0.2)]
-  bg-white
-  p-[2rem] sm:p-[4rem]
-  w-full
-  lg:w-[60%]
-  max-w-[60rem]
-  rounded-[8px]
-  mx-auto
-">
+          shadow-[0_7px_29px_0_rgba(100,100,111,0.2)]
+          bg-white
+          p-[2rem] sm:p-[4rem]
+          w-full
+          lg:w-[60%]
+          max-w-[60rem]
+          rounded-[8px]
+          mx-auto
+        ">
           <form className="m-0 p-0" onSubmit={sendEmail}>
             <div className="mb-[2rem]">
               <label
