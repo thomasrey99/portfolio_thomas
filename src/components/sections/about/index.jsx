@@ -6,6 +6,7 @@ import SkillsCard from "./skillsCard";
 import LegendItem from "./LegendItem";
 import ContentWrapper from "@/components/contentWrapper";
 import { t } from "@/libs/i18n";
+import Link from "next/link";
 
 const SearchIcon = ({
   size = 24,
@@ -75,12 +76,12 @@ const About = ({language}) => {
                 {about.about.info2}
               </p>
             </div>
-            <a
-              href="./#Contact"
+            <Link
+              href={`/${language}/#contact`}
               className="cursor-pointer bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:translate-y-[-3px]"
             >
               {about.about.contactButton}
-            </a>
+            </Link>
           </div>
           <div className="w-full">
             <div className="flex justify-between items-center">
