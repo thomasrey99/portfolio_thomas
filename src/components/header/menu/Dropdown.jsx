@@ -14,16 +14,19 @@ export default function Dropdown({ nav, isOpen, language, handleClose }) {
 
         {/* Links */}
         <nav className="flex flex-col divide-y">
-          {nav.sections.map(({ id, label }) => (
-            <Link
-              key={id}
-              href={`/${language}/#${id}`}
-              onClick={handleClose}
-              className="px-8 py-6 uppercase font-bold text-sm hover:bg-black/5 transition"
-            >
-              {label}
-            </Link>
-          ))}
+          {nav.sections.map(({ id, label }) => {
+            console.log(language)
+            return (
+              <Link
+                key={id}
+                href={`/${language}/#${id}`}
+                onClick={handleClose}
+                className="px-8 py-6 uppercase font-bold text-sm hover:bg-black/5 transition"
+              >
+                {label}
+              </Link>
+            )
+          })}
         </nav>
 
         {/* Language selector premium */}

@@ -6,7 +6,7 @@ import SkillsCard from "./skillsCard";
 import LegendItem from "./LegendItem";
 import ContentWrapper from "@/components/contentWrapper";
 import { t } from "@/libs/i18n";
-import { useLanguage } from "@/context/LanguageContext";
+
 const SearchIcon = ({
   size = 24,
   strokeWidth = 1.5,

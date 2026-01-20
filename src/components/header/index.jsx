@@ -10,13 +10,12 @@ import Weather from "../weather";
 export default function Header({ language }) {
   const traduction = t(language, "navbar");
   const [isOpen, setIsOpen] = useState(false);
-
   const handleToggle = () => setIsOpen((v) => !v);
   const handleClose = () => setIsOpen(false);
 
   return (
     <>
-      {/* NAVBAR */}
+
       <header className="fixed top-0 w-full z-50 h-20 md:h-24 bg-white shadow-[0_10px_100px_rgba(0,0,0,0.1)]">
         <div className="h-full flex items-center justify-between px-4 sm:px-6 md:px-10">
 

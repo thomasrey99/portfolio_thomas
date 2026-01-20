@@ -1,56 +1,82 @@
 {
-  "section":{
-    "title":"Mis proyectos",
-    "subtitle":"Desarrollador con experiencia real en producción, no solo proyectos."
+  "section": {
+    "title": "Mis proyectos",
+    "subtitle": "Desarrollador con experiencia real en producción, no solo proyectos."
   },
-  "projects":[
-  {
-    "id": "1",
-    "name": "Este portafolio",
-    "img": "/portfolio.jpg",
-    "sub": "Este es mi portafolio, el cual está construido con Next.js, Tailwind CSS, Next UI y CSS vanilla",
-    "description": [
-      "Este portafolio es una aplicación web personal construida con Next.js, JavaScript y Tailwind CSS, diseñada para mostrar mis proyectos, habilidades y experiencia profesional de una manera limpia y moderna.",
-      "Cuenta con una interfaz totalmente responsive, navegación fluida, secciones animadas y contenido dinámico cargado desde JSON, lo que permite una fácil escalabilidad y mantenimiento. El objetivo de este portafolio es demostrar no solo mis habilidades técnicas, sino también mi enfoque en la usabilidad, el rendimiento y la coherencia visual.",
-      "Cuenta con una interfaz totalmente responsive, navegación fluida, secciones animadas y contenido dinámico cargado desde JSON, lo que permite una fácil escalabilidad y mantenimiento. El objetivo de este portafolio es demostrar no solo mis habilidades técnicas, sino también mi enfoque en la usabilidad, el rendimiento y la coherencia visual."
-    ],
-    "tools": [
-      { "name": "Next js", "color": "green" },
-      { "name": "Tailwind css", "color": "orange" },
-      { "name": "Next ui", "color": "orange" },
-      { "name": "Javascript", "color": "red" },
-      { "name": "CSS 3", "color": "orange" },
-      { "name": "HTML 5", "color": "orange" }
-    ],
-    "url": "https://portfolio-thomas-6em0allkh-thomas-reys-projects.vercel.app/"
-  },
-  {
-    "id": "2",
-    "name": "Rick and Morty Pedia",
-    "img": "/rk.jpg",
-    "sub": "Aplicación web desarrollada con Next.js, JavaScript y Tailwind CSS, que consume la API pública de Rick and Morty para explorar personajes, buscar por nombre, aplicar filtros dinámicos y ver detalles.",
-    "description": [
-      "Rick and Morty Pedia es una aplicación web construida con Next.js y JavaScript que consume la API pública oficial de Rick and Morty para mostrar y explorar los personajes de la serie.",
-      "La aplicación permite a los usuarios navegar entre los personajes, buscar por nombre, aplicar filtros dinámicos y ver información detallada de cada personaje en una interfaz limpia y responsive. Se enfoca en el rendimiento, la usabilidad y una experiencia de navegación fluida, haciendo que sea fácil explorar todo el universo de Rick and Morty.",
-      "Este proyecto demuestra mi capacidad para integrar APIs de terceros, gestionar datos dinámicos y construir aplicaciones frontend escalables con tecnologías modernas."
-    ],
-    "tools": [
-      { "name": "Next js", "color": "green" },
-      { "name": "Tailwind css", "color": "orange" },
-      { "name": "Javascript", "color": "red" }
-    ],
-    "url": "https://rm-pedia.vercel.app/"
+  "projects": [
+    {
+      "id": "1",
+      "name": "Este portafolio",
+      "img": "/portfolio.jpg",
+      "sub": "Este es mi portafolio, el cual está construido con Next.js, Tailwind CSS, Next UI y CSS vanilla",
+      "description": [
+        "Este portafolio es una aplicación web personal construida con Next.js, JavaScript y Tailwind CSS, diseñada para mostrar mis proyectos, habilidades y experiencia profesional de una manera limpia y moderna.",
+        "Cuenta con una interfaz totalmente responsive, navegación fluida, secciones animadas y contenido dinámico cargado desde JSON, lo que permite una fácil escalabilidad y mantenimiento. El objetivo de este portafolio es demostrar no solo mis habilidades técnicas, sino también mi enfoque en la usabilidad, el rendimiento y la coherencia visual.",
+        "Cuenta con una interfaz totalmente responsive, navegación fluida, secciones animadas y contenido dinámico cargado desde JSON, lo que permite una fácil escalabilidad y mantenimiento. El objetivo de este portafolio es demostrar no solo mis habilidades técnicas, sino también mi enfoque en la usabilidad, el rendimiento y la coherencia visual."
+      ],
+      "tools": [
+        {
+          "name": "Next js",
+          "color": "green"
+        },
+        {
+          "name": "Tailwind css",
+          "color": "orange"
+        },
+        {
+          "name": "Next ui",
+          "color": "orange"
+        },
+        {
+          "name": "Javascript",
+          "color": "red"
+        },
+        {
+          "name": "CSS 3",
+          "color": "orange"
+        },
+        {
+          "name": "HTML 5",
+          "color": "orange"
+        }
+      ],
+      "url": "https://portfolio-thomas-sigma.vercel.app/es"
+    },
+    {
+      "id": "2",
+      "name": "Rick and Morty Pedia",
+      "img": "/rk.jpg",
+      "sub": "Aplicación web desarrollada con Next.js, JavaScript y Tailwind CSS, que consume la API pública de Rick and Morty para explorar personajes, buscar por nombre, aplicar filtros dinámicos y ver detalles.",
+      "description": [
+        "Rick and Morty Pedia es una aplicación web construida con Next.js y JavaScript que consume la API pública oficial de Rick and Morty para mostrar y explorar los personajes de la serie.",
+        "La aplicación permite a los usuarios navegar entre los personajes, buscar por nombre, aplicar filtros dinámicos y ver información detallada de cada personaje en una interfaz limpia y responsive. Se enfoca en el rendimiento, la usabilidad y una experiencia de navegación fluida, haciendo que sea fácil explorar todo el universo de Rick and Morty.",
+        "Este proyecto demuestra mi capacidad para integrar APIs de terceros, gestionar datos dinámicos y construir aplicaciones frontend escalables con tecnologías modernas."
+      ],
+      "tools": [
+        {
+          "name": "Next js",
+          "color": "green"
+        },
+        {
+          "name": "Tailwind css",
+          "color": "orange"
+        },
+        {
+          "name": "Javascript",
+          "color": "red"
+        }
+      ],
+      "url": "https://rm-pedia.vercel.app/characters"
+    }
+  ],
+  "viewButton": "Ver detalles",
+  "individual": {
+    "projectOverviewTitle": "Resumen del proyecto",
+    "toolsTitle": "Herramientas utilizadas",
+    "linksTitle": "Links",
+    "buttons": {
+      "liveButton": "Ir al sitio",
+      "backButton": "Volver"
+    }
   }
-],
-"viewButton":"Ver detalles",
-"individual": {
-  "projectOverviewTitle": "Resumen del proyecto",
-  "toolsTitle": "Herramientas utilizadas",
-  "linksTitle": "Links",
-  "buttons": {
-    "liveButton": "Ir al sitio",
-    "backButton": "Volver"
-  }
-}
-
 }

@@ -1,5 +1,4 @@
 "use client";
-import CoverParticles from "@/components/particles";
 import SkillsCard from "@/components/sections/about/skillsCard";
 import { t } from "@/libs/i18n";
 import Link from "next/link";
@@ -8,35 +7,10 @@ import { useParams } from "next/navigation";
 export default function Page() {
   const { id, lang } = useParams();
   const traduction = t(lang, "projects");
-  const project = traduction.projects.filter((project) => project.id == 1)[0]
-
+  const project = traduction.projects.filter((project) => project.id == id)[0]
 
   return (
     <>
-      {/* HERO */}
-      <section
-        className="relative h-screen home-background lg:bg-none w-full overflow-hidden mt-[6rem]"
-        id={`project-${id}`}
-      >
-        <CoverParticles />
-
-        <div className="absolute top-1/2 left-1/2 max-w-[90rem] w-[92%] -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="text-5xl sm:text-6xl uppercase tracking-[3px] text-[#111] font-extrabold">
-            {project.name}
-          </h1>
-
-          <div className="mt-[2rem] sm:mt-[4rem]">
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-white py-[0.8rem] px-[3rem] text-[1rem] uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-1"
-            >
-              {traduction.individual.buttons.liveButton}
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* CONTENT */}
       <section>

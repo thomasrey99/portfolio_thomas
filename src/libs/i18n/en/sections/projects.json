@@ -1,17 +1,82 @@
 {
-  "section":{
-    "title":"My projects", 
-    "subtitle":"Developer with real production experience, not just projects."
+  "section": {
+    "title": "My projects",
+    "subtitle": "Developer with real production experience, not just projects."
   },
-  "projects":[ { "id": "1", "name": "This portfolio", "img": "/portfolio.jpg", "sub": "This is my portfolio, which is built with Next js, tailwind css, next UI and vanilla css", "description": [ "This portfolio is a personal web application built with Next.js, JavaScript and Tailwind CSS, designed to showcase my projects, skills and professional experience in a clean and modern way.", "It features a fully responsive interface, smooth navigation, animated sections and dynamic content loaded from JSON, allowing easy scalability and maintenance. The goal of this portfolio is to demonstrate not only my technical abilities, but also my focus on usability, performance and visual consistency.", "It features a fully responsive interface, smooth navigation, animated sections and dynamic content loaded from JSON, allowing easy scalability and maintenance. The goal of this portfolio is to demonstrate not only my technical abilities, but also my focus on usability, performance and visual consistency." ], "tools": [ { "name": "Next js", "color": "green" }, { "name": "Tailwind css", "color": "orange" }, { "name": "Next ui", "color": "orange" }, { "name": "Javascript", "color": "red" }, { "name": "CSS 3", "color": "orange" }, { "name": "HTML 5", "color": "orange" } ], "url": "https://portfolio-thomas-6em0allkh-thomas-reys-projects.vercel.app/" }, { "id": "2", "name": "Rick and Morty Pedia", "img": "/rk.jpg", "sub": "Web application developed with Next.js, JavaScript, and Tailwind CSS, which consumes the Rick and Morty public API to explore characters, search by name, apply dynamic filters, and view details.", "description": [ "Rick and Morty Pedia is a web application built with Next.js and JavaScript that consumes the official Rick and Morty public API to display and explore characters from the series.", "The app allows users to browse characters, search by name, apply dynamic filters, and view detailed information about each character in a clean and responsive interface. It focuses on performance, usability, and a smooth navigation experience, making it easy to explore the entire Rick and Morty universe.", "This project demonstrates my ability to integrate third-party APIs, manage dynamic data, and build scalable frontend applications with modern technologies." ], "tools": [ { "name": "Next js", "color": "green" }, { "name": "Tailwind css", "color": "orange" }, { "name": "Javascript", "color": "red" } ], "url": "https://rm-pedia.vercel.app/" } ],
-  "viewButton":"View details",
-  "individual":{
-    "projectOverviewTitle":"Project overview",
-    "toolsTitle":"Tools used",
-    "linksTitle":"Links",
-    "buttons":{
-      "liveButton":"View live",
-      "backButton":"Go back"
+  "projects": [
+    {
+      "id": "1",
+      "name": "This portfolio",
+      "img": "/portfolio.jpg",
+      "sub": "This is my portfolio, which is built with Next js, tailwind css, next UI and vanilla css",
+      "description": [
+        "This portfolio is a personal web application built with Next.js, JavaScript and Tailwind CSS, designed to showcase my projects, skills and professional experience in a clean and modern way.",
+        "It features a fully responsive interface, smooth navigation, animated sections and dynamic content loaded from JSON, allowing easy scalability and maintenance. The goal of this portfolio is to demonstrate not only my technical abilities, but also my focus on usability, performance and visual consistency.",
+        "It features a fully responsive interface, smooth navigation, animated sections and dynamic content loaded from JSON, allowing easy scalability and maintenance. The goal of this portfolio is to demonstrate not only my technical abilities, but also my focus on usability, performance and visual consistency."
+      ],
+      "tools": [
+        {
+          "name": "Next js",
+          "color": "green"
+        },
+        {
+          "name": "Tailwind css",
+          "color": "orange"
+        },
+        {
+          "name": "Next ui",
+          "color": "orange"
+        },
+        {
+          "name": "Javascript",
+          "color": "red"
+        },
+        {
+          "name": "CSS 3",
+          "color": "orange"
+        },
+        {
+          "name": "HTML 5",
+          "color": "orange"
+        }
+      ],
+      "url": "https://portfolio-thomas-sigma.vercel.app/en"
+    },
+    {
+      "id": "2",
+      "name": "Rick and Morty Pedia",
+      "img": "/rk.jpg",
+      "sub": "Web application developed with Next.js, JavaScript, and Tailwind CSS, which consumes the Rick and Morty public API to explore characters, search by name, apply dynamic filters, and view details.",
+      "description": [
+        "Rick and Morty Pedia is a web application built with Next.js and JavaScript that consumes the official Rick and Morty public API to display and explore characters from the series.",
+        "The app allows users to browse characters, search by name, apply dynamic filters, and view detailed information about each character in a clean and responsive interface. It focuses on performance, usability, and a smooth navigation experience, making it easy to explore the entire Rick and Morty universe.",
+        "This project demonstrates my ability to integrate third-party APIs, manage dynamic data, and build scalable frontend applications with modern technologies."
+      ],
+      "tools": [
+        {
+          "name": "Next js",
+          "color": "green"
+        },
+        {
+          "name": "Tailwind css",
+          "color": "orange"
+        },
+        {
+          "name": "Javascript",
+          "color": "red"
+        }
+      ],
+      "url": "https://rm-pedia.vercel.app/characters"
+    }
+  ],
+  "viewButton": "View details",
+  "individual": {
+    "projectOverviewTitle": "Project overview",
+    "toolsTitle": "Tools used",
+    "linksTitle": "Links",
+    "buttons": {
+      "liveButton": "View live",
+      "backButton": "Go back"
     }
   }
 }
